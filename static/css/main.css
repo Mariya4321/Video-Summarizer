@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    overflow-x: hidden;
+}
+header {
+    background: linear-gradient(90deg, #1d3557, #457b9d);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+header nav {
+    display: flex;
+    gap: 20px;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+header a:hover {
+    background-color: #a8dadc;
+    color: #1d3557;
+    transform: scale(1.1);
+}
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom right, #1d3557, #457b9d);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    animation: rotateGradient 20s infinite linear;
+}
+@keyframes rotateGradient {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.hero button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #1d3557;
+    background-color: #a8dadc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.hero button:hover {
+    background-color: #f1faee;
+    transform: scale(1.1);
+}
+.container {
+    max-width: 100%;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding-left: 0;
+    padding-right: 0;
+}
+.container h2 {
+    text-align: center;
+    color: #1d3557;
+}
+form {
+    margin-top: 20px;
+display: flex;
+flex-direction: column;
+align-items: center; /* Center the form */
+gap: 15px;
+width: 80%; /* Increase form width */
+max-width: 600px; /* Limit the max width */
+margin: 0 auto; /* Center the form horizontally on the page */
+}
+
+
+input[type="url"] {
+width: 100%; /* Make input field fill the form width */
+padding: 15px; /* Add more padding for a larger input field */
+font-size: 1.1rem; /* Increase font size */
+border: 1px solid #ccc;
+border-radius: 5px;
+transition: box-shadow 0.3s;
+}
+
+input[type="url"]:focus {
+box-shadow: 0 0 8px #457b9d;
+outline: none;
+}
+
+button[type="submit"] {
+padding: 10px 25px; /* Slightly larger button */
+font-size: 1rem;
+background-color: #457b9d;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+background-color: #1d3557;
+transform: scale(1.05);
+}
+
+.feature-section {
+    margin-top: 30px;
+    text-align: center;
+}
+.feature-section h2 {
+    color: #457b9d;
+}
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.feature-card:hover {
+    transform: scale(1.05);
+}
+.feature-card h3 {
+    color: #1d3557;
+}
+.feature-card p {
+    color: #333;
+}
+.how-it-works {
+    margin: 40px auto;
+    max-width: 100%;
+    text-align: center;
+}
+.how-it-works h2 {
+    color: #457b9d;
+}
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.step-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+}
+.step-card h3 {
+    color: #1d3557;
+}
+.step-card p {
+    color: #333;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: #1d3557;
+    color: white;
+}

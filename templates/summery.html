@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarized Text</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background for the card */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .summary {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #1e88e5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Video Transcriber</h1>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Summarized Content</h1>
+        <p class="summary">
+                {% if text %}
+        <ul>
+            {% for sentence in text %}
+                <li>{{ sentence }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No summary available.</p>
+    {% endif %}
+        </p>
+    </div>
+    <footer>
+        <p>© 2025 Video Transcriber. All rights reserved.</p>
+    </footer>
+</body>
+</html>
